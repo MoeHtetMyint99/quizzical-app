@@ -1,26 +1,59 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  /* linear-gradient(212deg, #407BBF 14.18%, #40BFBF 78.37%) */
+  --color-toggle-1 : hsl(212, 50%, 50%);
+  --color-toggle-2 : hsl(180, 50%, 50%);
+
+  --color-toggle-bg : hsl(60, 90%, 80%);
+  --color-shadow-sphere: hsl(231, 50%, 70%);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.dark{
+  /* linear-gradient(212deg, #5959A6 14.18%, #2D2D53 78.37%) */
+  --color-toggle-1: hsl(240, 30%, 50%);
+  --color-toggle-2: hsl(240, 30%, 25%);
+
+  --color-toggle-bg: hsl(0, 0%, 50%);
+  --color-shadow-sphere: hsl(240, 29%, 70%);
 }
 
-* {
-  box-sizing: border-box;
+.background-01{
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  background-color: #DEEBF8;
+  bottom: -100px;
+  left: -100px;
+  filter: blur(3px);
+  border-radius: 30%;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.background-02 {
+  position: absolute;
+  width: 300px;
+  height: 250px;
+  background-color: #FFFAD1;
+  top: -130px;
+  right: -130px;
+  transform: rotate(45deg);
+  filter: blur(6px);
+  border-radius: 40%;
+}
+
+.toggleSlider {
+  background: 
+  linear-gradient(var(--color-toggle-bg), var(--color-toggle-bg)) padding-box,
+  linear-gradient(212deg, var(--color-toggle-1) 14.18%, var(--color-toggle-2) 78.37%) border-box;
+  border-color: transparent;
+  border-radius: 9999px;
+  /* background clip trick (to add gradient and border-radius to border) */
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.toggleSphere{
+  background: linear-gradient(212deg, var(--color-toggle-1) 14.18%, var(--color-toggle-2) 78.37%);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25), inset 0px 1px 2px #9C9CC9;
 }
