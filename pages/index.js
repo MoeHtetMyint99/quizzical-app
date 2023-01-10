@@ -11,7 +11,7 @@ export default function Home({ data }) {
   return (
     <div className={isDark ? 'dark' : null}>
       <div
-        className={`${styles.flexCenter} items-start pt-5 dark:bg-gray-900 relative min-h-screen overflow-hidden px-[30px] bg-[#F5F7FB] transition-all`}
+        className={`${styles.flexCenter} items-start pt-20 dark:bg-gray-900 relative min-h-screen overflow-hidden px-[30px] bg-[#F5F7FB] transition-all`}
       >
         <Head>
           <title>Quizzical App</title>
@@ -25,7 +25,7 @@ export default function Home({ data }) {
           toggleDark={() => (setIsDark((curVal) => !curVal))}
         />
         <main
-          className={`${styles.fonts.inter} relative z-10 text-[3rem] w-fit max-w-[400px] md:max-w-[600px] lg:max-w-[800px] mx-auto pt-5 pb-8 md:pb-[25px]`}
+          className={`${styles.fonts.inter} relative z-10 text-[3rem] w-fit max-w-[400px] md:max-w-[600px] lg:max-w-[800px] mx-auto pb-8 md:pb-[25px]`}
         >
           <QuestionsList data={data} />
         </main>
